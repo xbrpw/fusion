@@ -20,7 +20,7 @@
   border-radius: 47% 53% 51% 49% / 70% 70% 40% 40%; 
   
   display: flex;
-  margin-top: 10vmin;
+  /*margin-top: 10vmin;*/
 }
 /* left ear */
 .pikachu-top::after {
@@ -445,10 +445,8 @@
   top: -6.5vmin;
   left: 1vmin;
   border-radius: 50%;
-  
   opacity: 0.5;
 }
-
 
 
 
@@ -461,7 +459,6 @@
 
   body,
   html {
-
     display: grid;
     background-color: var(--bg);
     font-family: "Fredoka One", cursive;
@@ -469,7 +466,7 @@
 
   p {
     margin: auto;
-    font-size: 14vw;
+    font-size: 11vw;
     text-align: center;
     color: var(--bg);
   }
