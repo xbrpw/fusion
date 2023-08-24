@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">      
+  <title>eBot Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+  <meta name="description" content="El ebot FUERA DE LINEA: PARA CORRABORAR INFORMACIÖN DE lighthouse de 100%">
+  <style>
+    /*!
+        eBoot Sample
+        Animaciones CSS en @EscuelaIT
+        Joan León @nucliweb
+    */
+    *,
+:after,
+:before {
+	box-sizing: border-box;
+}
+    body, .body-ebot {      
+      overflow-y: hidden;
+      height:600px;
+      box-sizing: border-box;
+    }
+    .body-ebot:after {
+      box-sizing: border-box;
+    }
+
+    .body-ebot:before {
+      box-sizing: border-box;
+    }
+    
+    .ebot {
+        position: relative;
+        top: 20px;
+        width: 343px;
+        height: 338px;
+        margin: 0 auto;
+        background: url(https://ucarecdn.com/e28eae62-1866-48bd-8c1a-b186537768e0/-/setfill/ece3d2/-/format/webp/) 0 0 no-repeat;
+        z-index: 101;
+        transform: translateY(-370px);
+        animation: ebot 500ms ease 1.2s both,
+                   bounce 1400ms ease-out 0s infinite;
+    
+    }
+    
+    .ebot::before {
+        content: "";
+        position: absolute;
+        top: 125px;
+        left: 105px;
+        width: 123px;
+        height: 71px;
+        display: block;
+        background: url(https://ucarecdn.com/fefd478b-9fda-4cc6-8601-550d9692da0c/-/setfill/ece3d2/-/format/webp/) 0 0 no-repeat;
+        animation: eyes 150ms steps(3) 1.8s both;
+    
+    }
+    
+    .ebot::after {
+        content: "";
+        position: relative;
+        top: 0;
+        left: 145px;
+        width: 31px;
+        height: 27px;
+        display: block;
+        background: url(data:image/webp;base64,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) 0 0 no-repeat;
+        animation: ball 450ms steps(5) both infinite;
+    }
+    
+    
+    
+    .shadow {
+        position: absolute; top: 450px;
+        width: 100%;
+        height: 45px;
+    }
+    
+    .shadow::after {
+        content: "";
+        position: relative;
+        width: 245px;
+        height: 15px;
+        margin: 0 auto;
+        display: block;
+        border-radius: 50%;
+        background-color: rgba(0,0,0,.3);
+        box-shadow: 0 0 5px 20px rgba(0,0,0,.3);
+        transform: scale(0);
+        animation: shadow 500ms ease 1.2s both,
+                   bounce-shadow 1400ms ease-out 0s infinite;
+    }
+    
+    
+    /* eBot animation ----------------------------------- */
+    @keyframes ebot {
+         to { transform: translateY(0); }
+    }
+    
+    /* Shadow animation --------------------------------- */
+    @keyframes shadow {
+         to { transform: scale(0.9); }
+    }
+    
+    /* Bounce Shadow animation -------------------------- */
+    @keyframes bounce-shadow {
+         0% { transform: scale(0.9); }
+         50% { transform: scale(1); }
+       100% { transform: scale(0.9); }
+    }
+    
+    
+    
+    /* Eyes animation ----------------------------------- */
+    @keyframes eyes {
+         0% {background-position: 0 0; }
+         100% {background-position: 0 -213px; }
+    }
+    
+    
+    /* Ball animation ----------------------------------- */
+    @keyframes ball {
+         0% {background-position: 0 0; }
+         100% {background-position: 0 -135px; }
+    }
+    
+    
+    /* Bounce animation --------------------------------- */
+    @keyframes bounce {
+         0%, 100% { transform: translateY(0) }
+         50% { transform: translateY(20px) }
+    }
+    
+  </style>
+<body>
+
+<div class="body-ebot">
+    <div class="ebot"></div>
+    <div class="shadow"></div>
+</div>
+  
+</body>
+
+</html>
